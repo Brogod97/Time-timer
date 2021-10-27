@@ -14,7 +14,7 @@
   <body>
     <div class="container">
       <div class="time-timer">
-        <h1 class="title">Time timer</h1>
+        <h1 class="title">Time <strong>timer</strong></h1>
         <div class="minute">
           <div class="m0"><span>0</span></div>
           <div class="m5"><span>5</span></div>
@@ -29,23 +29,25 @@
           <div class="m50"><span>50</span></div>
           <div class="m55"><span>55</span></div>
         </div>
+        <canvas id="remain-time" width="220" height="220"></canvas>
       </div>
       <div class="controller">
-        <div class="button">
+        <div class="buttons">
           <p class="lable">buttons</p>
           <button id="btn-play"><i class="fas fa-play"></i></button>
           <button id="btn-pause"><i class="fas fa-pause"></i></button>
           <button id="btn-refresh"><i class="fas fa-sync-alt"></i></button>
         </div>
         <div class="setting">
-          <p class="lable">set minutes</p>
+          <p id="input-minute" class="lable">set minutes</p>
           <button id="btn-minus"><i class="fas fa-minus"></i></button>
-          <span id="minutes" class="number"> 30 </span>
+          <input id="minutes" class="number" type="text" placeholder="30" min = 0 max = 60></input>
           <button id="btn-plus"><i class="fas fa-plus"></i></button>
         </div>
       </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
