@@ -4,10 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Time Timer</title>
   </head>
   <body>
+    <div class="container">
+      <div class="time-timer">
+        <h1 class="title">Time timer</h1>
+        <div class="minute">
+          <div class="m0"><span>0</span></div>
+          <div class="m5"><span>5</span></div>
+          <div class="m10"><span>10</span></div>
+          <div class="m15"><span>15</span></div>
+          <div class="m20"><span>20</span></div>
+          <div class="m25"><span>25</span></div>
+          <div class="m30"><span>30</span></div>
+          <div class="m35"><span>35</span></div>
+          <div class="m40"><span>40</span></div>
+          <div class="m45"><span>45</span></div>
+          <div class="m50"><span>50</span></div>
+          <div class="m55"><span>55</span></div>
+        </div>
+      </div>
+      <div class="controller">
+        <div class="button">
+          <p class="lable">buttons</p>
+          <button id="btn-play"><i class="fas fa-play"></i></button>
+          <button id="btn-pause"><i class="fas fa-pause"></i></button>
+          <button id="btn-refresh"><i class="fas fa-sync-alt"></i></button>
+        </div>
+        <div class="setting">
+          <p class="lable">set minutes</p>
+          <button id="btn-minus"><i class="fas fa-minus"></i></button>
+          <span id="minutes" class="number"> 30 </span>
+          <button id="btn-plus"><i class="fas fa-plus"></i></button>
+        </div>
+      </div>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>
