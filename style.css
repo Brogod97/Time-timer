@@ -32,10 +32,10 @@ body {
 
 .time-timer .title {
   position: absolute;
-  right: 6%;
-  bottom: 3%;
+  right: 5%;
+  bottom: 1.5%;
   margin: 0;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
