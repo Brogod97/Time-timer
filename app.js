@@ -22,7 +22,15 @@ btnMinus.on("click", clickMinus);
 btnPlus.on("click", clickPlus);
 btnPlay.on("click", clickPlay);
 btnPause.on("click", clickPause);
-btnRefresh.on("click", clicRefreshs);
+btnRefresh.on("click", clickRefresh);
+document.querySelector("#minutes").addEventListener("keyup", (e) => {
+  if (e.keyCode === 13) {
+    let inputNum = document.getElementById("minutes").value;
+    minute = inputNum;
+    remainTime = inputNum * 60;
+    drawArk();
+  }
+});
 
 function setMinutes() {
   txtMinute.text(minute);
@@ -33,16 +41,16 @@ function setMinutes() {
 
 function clickMinus() {
   if (minute > 1) minute--;
+  $("input:text").attr("value", minute);
   clickPause();
-  $("input:text").attr("placeholder", minute);
   setMinutes();
 }
 
 function clickPlus() {
   if (minute < 60) minute++;
+  $("input:text").attr("value", minute);
   clickPause();
   setMinutes();
-  $("input:text").attr("placeholder", minute);
 }
 function clickPlay() {
   run = true;
@@ -57,7 +65,7 @@ function clickPause() {
   clearInterval(timer);
   $(".time-timer").removeClass("blink");
 }
-function clicRefreshs() {
+function clickRefresh() {
   clickPause();
   setMinutes();
 }
