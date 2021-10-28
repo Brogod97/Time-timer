@@ -5,6 +5,8 @@ const btnPlay = $("#btn-play"),
   btnPlus = $("#btn-plus"),
   txtMinute = $("#minutes");
 
+const beepSound = new Audio("sound/beep-sound.mp3");
+
 let minute = 30, // default value
   remainTime,
   timer,
@@ -64,6 +66,7 @@ function clickPause() {
   btnPause.hide();
   clearInterval(timer);
   $(".time-timer").removeClass("blink");
+  beepSound.pause();
 }
 function clickRefresh() {
   clickPause();
@@ -88,6 +91,7 @@ function runTimer() {
   if (remainTime === 0) {
     clearInterval(timer);
     $(".time-timer").addClass("blink");
+    beepSound.play();
   } else {
     remainTime--;
     drawArk();
