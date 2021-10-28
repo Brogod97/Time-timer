@@ -58,7 +58,7 @@ function clickPlay() {
   run = true;
   btnPlay.hide();
   btnPause.show();
-  timer = setInterval(runTimer, 10); // speed
+  timer = setInterval(runTimer, 1000); // speed
 }
 function clickPause() {
   run = false;
